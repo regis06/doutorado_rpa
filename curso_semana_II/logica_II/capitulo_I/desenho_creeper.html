@@ -1,0 +1,45 @@
+<meta charset="UTF-8">
+
+<canvas width="1330" height="600"></canvas>
+
+<script>
+
+    function retangulo(modelo)
+    {
+        pincel.fillStyle = modelo[0];
+        pincel.fillRect(modelo[1], modelo[2], modelo[3], modelo[4]);
+    }
+
+    function redesenha()
+    {
+        pincel.fillStyle = "lightgrey";
+        pincel.fillRect(0, 0, 1330, 600);
+        
+        pincel.fillStyle = "green";
+        pincel.fillRect(0, 0, (1330/4), 600);
+        
+        pincel.fillStyle = "red";
+        pincel.fillRect( ((3/4)*1330), 0, (1330/4), 600);
+
+        pincel.fillStyle = "yellow";
+        pincel.beginPath();
+        pincel.moveTo((1330/2),(600/2));
+        pincel.lineTo((1330/4), 600);
+        pincel.lineTo(((3/4)*1330),600);
+        pincel.fill();
+    }
+
+    var tela = document.querySelector("canvas");
+    var pincel = tela.getContext('2d');
+    var modelosRetangulo = [["darkgreen",0,0,350,300],["black",50,60,90,90], 
+                                ["black",210,60,90,90], ["black",140,150,70,100], ["black",100,190,40,110], ["black",210,190,40,110]]; 
+   
+    /*
+    
+    */
+    for(let i = 0; i < modelosRetangulo.length; i++)
+    {
+        retangulo(modelosRetangulo[i]);
+    }
+
+</script>

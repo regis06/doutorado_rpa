@@ -1,0 +1,48 @@
+<meta charset="UTF-8">
+
+<script>
+
+function pulaLinha(){
+
+    document.write("<br>");
+
+}
+
+function mostra(texto){
+
+    document.write(texto);
+    pulaLinha();
+
+}
+
+function sorteia(num){
+
+    return Math.round(Math.random()*num);
+
+}
+
+var numALeatorio = sorteia(10);
+
+console.log(numALeatorio);
+
+var chute = parseInt(prompt("Qual o chute: "));
+
+if(chute != numALeatorio){
+
+    mostra("Você errou!! O número pensado foi " + numALeatorio + ".");
+
+    if(numALeatorio < chute){
+
+        mostra("Seu número foi maior que o correto.");
+
+    }else{
+
+        mostra("Seu número foi menor que o correto.");
+
+    }
+}else{
+    mostra("Você acertou, parabéns!!");
+    
+}
+
+</script>

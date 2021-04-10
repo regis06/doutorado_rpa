@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+<script>
+
+    var loginCadastrado = "alura";
+    var senhaCadastrada = "alura321";
+
+    var loginInformado = "";
+    var senhaInformada = "";    
+
+    var tentiva = 1;
+
+    while( (loginCadastrado != loginInformado || senhaCadastrada != senhaInformada) && tentiva <= 3 ) {
+    
+    loginInformado = prompt("Informe seu login");
+    senhaInformada = prompt("Informe sua senha");    
+    
+        if ( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+            
+            alert("Bem-vindo ao sistema " + loginInformado);
+            break;
+        
+        } else {
+            
+            if (tentiva == 3){
+                alert("Você esgotou suas tentivas.");
+            }else{
+                alert("Login inválido. Tente novamente");
+            }
+            tentiva++;
+        
+        }
+    }
+
+
+</script>

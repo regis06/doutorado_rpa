@@ -1,0 +1,47 @@
+<meta charset="UTF-8">
+
+<script>
+
+function pulaLinha(){
+
+    document.write("<br>");
+
+}
+
+function mostra(texto){
+
+    document.write(texto);
+    pulaLinha();
+
+}
+
+function par(n){
+
+    let isPar = false;
+
+    if((n % 2) == 0){
+
+        isPar = true;
+
+    }
+
+    return isPar; 
+
+}
+
+var numero = 1;
+
+while (numero <= 100){
+
+    if (par(numero)){
+
+        mostra("O número "+ numero + " é par.")
+    
+    }
+    numero++;
+
+}
+
+mostra("FIM");
+
+</script>

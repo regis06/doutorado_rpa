@@ -1,0 +1,133 @@
+	Cria arquivo texto
+
+echo Bem Vindo --> imprime o argumento após o echo na tela
+
+echo "Bem Vindo" --> Bem Vindo se torna um argumento entre aspas e é impresso na tela
+
+echo "Bem Vindo" > bemvindo.txt --> escreve no arquivo bemvindo.txt o argumento Bem Vindo
+
+	Mostra arquivos texto
+
+cat bemvindo.txt --> mostra o conteudo do arquivo na tela
+
+	Limpa Tela
+
+clear --> limpa tela 
+
+	Help
+	
+man comando -->  orientação sobre o comando como usá-lo
+
+		Diretórios
+
+ls -la --> comando mostra detalhes dos arquivos
+
+ls -l --> comando mostra detalhes dos arquivos
+
+pwd --> diretório ao qual estou
+
+ls --> lista os arquivos deste diretório
+
+ls .. e ls . --> mostra arquivos e pastas do diretório anterior e atual respectivamente
+
+cd --> sem argumento vai pro diretorio padrão do usuário
+
+ls * --> asterisco utilizado para mostrar todos os conteudos de todas as pastas assim como pode ser utilizado para definir parametros como 		utilizado em cat
+
+	Cria e Remove Diretórios
+
+mkdir novapasta --> cria nova pasta no diretório atual
+
+rmdir pastaaserapagada --> apaga pasta do diretório atual
+
+rm -r pastapagada --> comando que apaga pasta juntamente com seus arquivos
+
+cp -r diretorio dircopiado --> copia diretórios inteiros
+
+	Apaga arquivos
+
+rm arqapagado --> remove arquivos
+
+	Exibe conteudo Arquivos
+
+cat nome*.txt --> exibe xonteudo de todos arquivos que tiverem nome e seguidos de .txt
+
+cat nome? --> exibe conteudo dos arquivos que tiverem no nome um caractere 
+
+	Copia e Recorta Arquivos
+
+cp arqatual arqcopiado --> copia o arq atual para arq copiado
+
+mv arquivo arqrecortado --> apaga o arquivo e reescreveo como arqrecortado
+
+	Compactando arquivos ZIP
+	
+zip arqzipado.zip pastazipada/ --> compacta a pasta pastazipada para o arquivo arqzipado.zip
+
+unzip -l arqzipado.zip --> mostra o conteudo do arquivo zipado
+
+unzip arqzipado.zip --> descompacta os arquivos compactados
+
+zip -r arqzipado.zip pastazipada/ --> compacta a pasta pastazipada e todo seu conteudo para o arquivo arqzipado.zip
+
+zip -rq arqzipado.zip pastazipada/ --> compacta a pasta pastazipada e todo seu conteudo para o arquivo arqzipado.zip e não exibe status de 						compactação
+
+	Compactação TAR
+
+     |-------->Create
+     ||------->Zip
+tar -cz pastazipada/ > arqcompactado.tar.gz --> Cria arquivo tar com zip da pastazipada/ com arquivo de nome arqcompactado.tar.gz
+
+     |------->Extract
+     ||------>Zip
+tar -xz < arquivocompactado.tar.gz --> Descompacta arquivocompactado.tar.gz 
+
+       |----->file name
+tar -czf arqcompactado.tar.gz pastazipada/ --> compacta arquivo arqcompactado.tar.gz da pastazipada
+
+     |------->verbose(detalhes)
+tar -vxzf arqcompactado.tar.gz --> descompacta arquivo arqcompactado.tar.gz com mais detalhes(verbose)
+
+      |------>Tipo de compactação bzip2
+tar -xjf arqcompactado.tar.bz2 --> compacta arquivo no tipo bzip 2
+
+touch arquivo --> muda data de modificação do arquivo
+
+date "+%d/%m/%Y" --> mostra data atual do sistema formata dia/mês/ano mais no comando: date --help
+
+	Leitura Especial de Arquivos
+	
+head -n x arquivo --> le as x primeiras linhas do arquivo(sem -n le as 10 primeiras)
+
+tail -n x arquivo --> lê as x ultimas linhas do arquivo(sem -n le as 10 ultimas)
+
+less arquivo --> abre arquivo e voce percorre o arquivo conforme queira
+
+	Trabalhando com VI
+
+vi arquivo --> abre arquivo com vi
+
+	Usando o VI
+		- Setas caminham o cursor pelo texto
+		- I insere valores no documento
+		- Esc sai do modo de edição
+		- :w salva arquivo
+		- :q sai 
+		- a adiciona no próximo caractere
+		- x apaga caractere
+		- dd exclui linha inteira
+		- :q! sai sem salvar
+		- A adiciona no fim da linha
+		- se insere um valor depois o comando vai executar o comand valor+comando
+		- :wq salva e sai do arquivo
+		- G vai para a ultima linha
+		- valor+G vai para a linha valor
+		- 1G vai para primeira linha
+		- $ vai para o final da linha
+		- 0 inicio da linha
+		- /busca faz uma busca da palavra escrita com 
+			n vai pra próxima palavra encontrada
+			N retorna pra ultima palavra enocntrada
+		- yy copia arquivos
+		- p cola os arquivos
+		

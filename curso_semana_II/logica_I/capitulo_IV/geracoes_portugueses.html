@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha(){
+
+        document.write("<br>");
+
+    }
+
+    function mostra(texto){
+
+        document.write(texto);
+        pulaLinha();
+
+    }
+
+    var anoPrimeiraGeracao = 1500;
+    var anoAtual = 2021;
+    var mediaGeracao = 28;
+
+    var idadePrimaGeracao = anoAtual - anoPrimeiraGeracao;
+    
+    var totalGeracoes = Math.round(idadePrimaGeracao / mediaGeracao);
+
+    mostra("Desde "+ anoPrimeiraGeracao + ", já se passaram "+ totalGeracoes +" gerações de portugueses.");
+
+</script>

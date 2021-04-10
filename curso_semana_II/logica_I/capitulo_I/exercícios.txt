@@ -1,0 +1,17 @@
+Capítulo 1 - Parte 5 --> primeiro_teste.html
+Capítulo 1 - Parte 7 --> segundo_teste.html
+Capítulo 1 - Parte 9 --> ALternativa A
+Capítulo 1 - Parte 11 --> ALternativa B
+Capítulo 1 - Parte 12 --> ALternativa A
+Capítulo 1 - Parte 13 --> ALternativa C
+Capítulo 1 - Parte 15 --> texto_puro.html
+Capítulo 1 - Parte 16 --> ALternativa C
+Capítulo 1 - Parte 17 --> teste.html
+Capítulo 1 - Parte 19 --> ALternativa A
+Capítulo 1 - Parte 20 --> ALternativa B
+Capítulo 1 - Parte 21 --> ALternativa B
+Capítulo 1 - Parte 22 --> tio_ben.html (problema na linha 9 falta uma aspas)
+Capítulo 1 - Parte 23 --> Alternativa C
+Capítulo 1 - Parte 24 --> victoria.html (comandos alert estavam fora da TAG script)
+Capítulo 1 - Parte 25 --> teste_de_fugencio.html (instrução Javascript alert  estava fora da TAG script e comando h1 HTML dentro da tag de interpretação Javascript)
+Capítulo 1 - Parte 26 --> Resolvido com arquivos primeiro_teste.html e segundo_teste.html

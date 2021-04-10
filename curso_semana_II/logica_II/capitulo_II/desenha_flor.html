@@ -1,0 +1,47 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    var x = 300, y = 200, raio = 5, quantiaDeCirculos = 1;
+    var cor = "yellow";
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+
+    function desenhaCirculo(x, y, raio, cor) {
+
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2*(Math.PI));
+        pincel.fill();
+    }
+
+    for (let lacoX = (x-((2*raio)*quantiaDeCirculos)); lacoX <= (((2*raio)*quantiaDeCirculos)+x); lacoX += (2*raio))
+    {
+        for(let lacoY = (y-((2*raio)*quantiaDeCirculos)); lacoY <= ((quantiaDeCirculos*(2*raio))+y); lacoY += (2*raio))
+        {
+            if(lacoX == x || lacoY == y )
+            {
+                if((lacoX == x) && (lacoY == y))
+                {
+                    cor = "red";
+                }else if((lacoX == (x-(2*raio))) && (lacoY == y))
+                {
+                    cor = "orange";
+                }else if((lacoX == (x+(2*raio))) && (lacoY == y))
+                {
+                    cor = "black";
+                }else if((lacoX == x) && (lacoY == (y-(2*raio))))
+                {
+                    cor = "yellow";
+                }else if((lacoX == x) && ((2*raio)+y))
+                {
+                    cor = "blue"
+                }
+                desenhaCirculo(lacoX, lacoY, raio, cor);
+            }
+            
+        }    
+    }
+</script>

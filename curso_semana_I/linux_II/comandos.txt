@@ -1,0 +1,104 @@
+		Processos
+		
+ps -e --> mostra todos os processos ativos
+ps -ef --> mostra detalhes de todos os processos ativos
+
+       |---->Símbolo faz o retorno de ps sendo jogado para o comando grep que é um comando de busca
+ps -ef | grep palavrabuscada
+ 
+
+		Finalizar processos
+		
+kill idprocesso--> encerra processo
+kill -9 idprocesso --> encerra processo totalmente
+killall -9 nomeprocesso -->  interrompe a execução dos processos com nomeprocesso
+
+		Uso de recursos do sistema
+		
+top --> mostra as informações de todos os processos
+
+		Multiplos programas no Terminal
+
+Ctrl-z --> Pausa execução do programa executado diretamente no terminal
+Ctrl-c --> Mata o programa que está executando diretamente no terminal
+job --> mostra os programas rodando em paralelo com o terminal
+bg idJob --> coloca rodando paralelamente o idJob do programa
+fg idJob --> trás novamente a execução deste programa diretamente no terminal
+pstree --> arvore de processos simultâneos e seus programas raiz
+
+		Execução simultânea fácil
+
+	     |----> Adicionando o & o programa roda simultaneamente com o terminal 
+nomePrograma &
+
+		Execução de arquivo sh
+			
+chmod +x arquivo --> trocar tipo de propriedade de arquivo para executar
+                 |--> para executar se lembre de somente colocar ./arquivo
+
+sh arquivo --> executa arquivo
+
+		Localizar programas
+
+/usr/bin/programa --> local padrão de execução de programas depois de inserido nesta pasta é só colocar o nome do 
+			programa no terminal que ele executa
+		
+locate programa --> localiza dado programa no banco de dados do linux de diretórios
+sudo updatedb --> atualiza o banco de dados de diretórios rodar como root
+
+which programa --> mostra diretório do programa
+
+whoami --> nome do susario atual
+passwd --> altera senha do usuário
+
+		Controle de Usuários
+
+sudo paswd --> altera senha root
+su root --> loga como root
+su usuario --> loga como usuário
+
+adduser nomeusuario
+
+		Troca permissoes entre grupos
+
+      |------> Tipo de grupo de usuário: o = outros usuários; u = usuário que criou; g = grupo de usuários do que criou.
+      ||-----> Sinal de retirada de parametros, + para adicionar.
+      |||----> Leitura retirada
+      ||||---> Execução retirada
+chmod o-rx nomediretorio
+
+		Variáveis de ambiente
+		
+env --> mostra todas variáveis de ambiente
+env | grep pesquisa --> pesquisa uma palavra chave no resultado das variáveis de ambiente
+
+variável PATH= pastaexecutavel/:pasta2executavel/
+
+		Conta caracteres, palavras e linhas
+
+    |----> se mudado para -c ou -l contara caracteres ou linhas respectivamente.
+wc -w *.txt | grep total --> faz a contagem de palavras com comando wc -w 
+				e pega o retorno com o grep e filtra a linha que tem o total
+
+		Instalando Programas 
+
+apt-get install programa --> instala programa
+apt-get update --> atualiza lista de programas
+apt-cache search programa --> procura entre uma lista de programas
+apt-get remove programa --> desinstala programa
+
+		Instalando pacote
+		
+sudo dpkg -i arqprograma.deb --> instalar o programa arqprograma.deb
+sudo dpkg -r arqprograma --> Desinstala programa
+
+		Parando Serviços
+
+recomenda-se usar o ps -ef para visualizar o processo
+		
+sudo service vsftpd stop --> para oa serviço sem terminar com o processo bruscamente
+sudo service vsftpd start --> reinicializa o serviço do programa
+
+sudo service programa status --> verifica o status deste serviço
+
+

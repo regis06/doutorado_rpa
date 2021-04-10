@@ -1,0 +1,52 @@
+<meta charset="UTF-8">
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    function desenhaQuadrado(x, y, tamanho, cor) {
+
+        pincel.fillStyle = cor;
+        pincel.fillRect(x, y, tamanho, tamanho);
+        pincel.strokeStyle = 'black';
+        pincel.strokeRect(x, y, tamanho, tamanho);
+    }
+
+    function redesenhaFundo()
+    {
+        desenhaQuadrado(0,0,400,"lightgray");
+    }
+
+    function insereTexto(texto, x, y)
+    {
+        pincel.font='20px Georgia';
+        pincel.fillStyle='black';
+        pincel.fillText(texto, x, y);
+    }
+
+    var valX = 1, valY = 1;
+
+    function animaQuadrado()
+    {
+        if (valX <= 200)
+        {
+            redesenhaFundo();
+            insereTexto("Qual é a fração?",50,30);
+            desenhaQuadrado(valX-150,50,50,"green");
+            desenhaQuadrado(valX-100,50,50,"green");
+            desenhaQuadrado(valX-50,50,50,"green");
+            desenhaQuadrado(valX,50,50,"white");
+            valX+= 5;
+        }
+    }
+
+    setInterval(animaQuadrado, 50);
+
+    desenhaQuadrado(50,50,50,"green");
+    desenhaQuadrado(100,50,50,"green");
+    desenhaQuadrado(150,50,50,"green");
+    desenhaQuadrado(200,50,50,"white");
+</script>

@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+
+<script>
+
+function pulaLinha(){
+
+    document.write("<br>");
+
+}
+
+function mostra(texto){
+
+    document.write(texto);
+    pulaLinha();
+
+}
+
+var anoCopa = 1930;
+
+function anoAtual(){
+
+    var d = new Date(); 
+    var ano = d.getFullYear();
+    return ano;
+
+}
+
+while(anoCopa <= anoAtual()){
+    
+    mostra("Teve copa em " + anoCopa + ".");
+
+    anoCopa += 4;
+
+}
+
+mostra("FIM");
+
+</script>

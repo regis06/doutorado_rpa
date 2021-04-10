@@ -1,0 +1,11 @@
+Capitulo III - Parte 1 --> programa.html
+Capitulo III - Parte 2 --> tapando_buraco.html
+Capitulo III - Parte 3 --> onde_erro.html - variável com nome incorreto
+Capitulo III - Parte 4 --> Alternativa A
+Capitulo III - Parte 5 --> facilitando_vida.html - Adicionada variável nTabuada para facilitar a troca.
+Capitulo III - Parte 6 --> programa_II.html
+Capitulo III - Parte 8 --> detetive_roy.html - Adicionadas as varáveis
+Capitulo III - Parte 9 --> total_idades.html - Adicionada a variável de totaIdades
+Capitulo III - Parte 10 --> Alternativa B
+Capitulo III - Parte 11 --> Alternativa B
+Capitulo III - Parte 12 --> calcula_consumo.html

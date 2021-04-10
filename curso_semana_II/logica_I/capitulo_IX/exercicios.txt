@@ -1,0 +1,10 @@
+Capitulo IX - Parte 1 --> introducao_array_e_html.html
+Capitulo IX - Parte 2 --> Alternativa C
+Capitulo IX - Parte 3 --> Alternativa B
+Capitulo IX - Parte 4 --> Alternativa C
+Capitulo IX - Parte 5 --> problema_array.html - estava descrito parcelas.lenght invés do correto que é parcelas.length
+Capitulo IX - Parte 6 --> problema_laco_array.html - era inicializado o array com 1 invés de 0
+Capitulo IX - Parte 7 --> array_undefined.html - a condicao '<=' fazia ler um campo do array que não existe
+Capitulo IX - Parte 10 --> Alternativa A
+Capitulo IX - Parte 11 --> ingrediente_repetido.html
+Capitulo IX - Parte 12 --> altera_problema_fiquei_de_fora.html

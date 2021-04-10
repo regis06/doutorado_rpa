@@ -1,0 +1,69 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    var xAleatorio;
+    var yAleatorio;
+
+    var raio = 10;
+
+    function desenhaCirculo(x, y, raio, cor) {
+
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * Math.PI);
+        pincel.fill();
+
+   }
+
+    function limpaTela() {
+        
+        pincel.clearRect(0, 0, 600, 400);
+
+    }
+
+    function desenhaAlvo(x, y) {
+
+        desenhaCirculo(x, y, raio+20, 'red');
+        desenhaCirculo(x, y, raio+10, 'white');
+        desenhaCirculo(x, y, raio, 'red');
+
+    }
+
+    function sorteiaPosicao(maximo) {
+
+        return Math.floor(Math.random() * maximo);
+
+    }
+
+    function atualizaTela() {
+        limpaTela();
+        xAleatorio = sorteiaPosicao(600);
+        yAleatorio = sorteiaPosicao(400);
+        desenhaAlvo(xAleatorio, yAleatorio);
+    }
+
+    var mouseX = 0, mouseY = 0;
+
+    function acertaAlvo(evento){
+        mouseX = evento.pageX - tela.offsetLeft;
+        mouseY = evento.pageY - tela.offsetTop;
+
+        if(mouseX > (xAleatorio - raio) 
+            && mouseX < (xAleatorio + raio) 
+                && mouseY > (yAleatorio - raio) 
+                    && mouseY < (yAleatorio + raio)){
+                        alert("Acertou");  
+                    }
+    }
+
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+
+    setInterval(atualizaTela, 1000);
+    tela.onclick = acertaAlvo;
+    
+</script>

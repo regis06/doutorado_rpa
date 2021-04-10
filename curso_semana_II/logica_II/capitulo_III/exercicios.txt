@@ -1,0 +1,5 @@
+Capitulo III - Parte 4 --> pega_mouse.html
+Capitulo III - Parte 5 --> pega_shift_mouse.html
+Capitulo III - Parte 8 --> desenho_continuo.html
+Capitulo III - Parte 9 --> desenho_continuo_melhorado.html
+Capitulo III - Parte 10 --> alvo.html

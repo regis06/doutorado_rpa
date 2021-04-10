@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<script>
+
+function pulaLinha(){
+
+    document.write("<br>");
+
+}
+
+function mostra(texto){
+
+    document.write(texto);
+    pulaLinha();
+
+}
+
+var numALeatorio = Math.round(Math.random()*5);
+
+console.log(numALeatorio);
+
+var chute = parseInt(prompt("Qual o chute: "));
+
+if(chute != numALeatorio){
+
+    mostra("Você errou!! O número pensado foi " + numALeatorio + ".");
+
+}else{
+
+    mostra("Você acertou, parabéns!!");
+
+}
+
+</script>

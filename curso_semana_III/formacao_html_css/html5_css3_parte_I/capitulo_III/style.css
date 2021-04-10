@@ -1,0 +1,16 @@
+body{
+    background-color: lightblue;
+}
+
+h1 {
+    color: navy;
+}
+
+p{
+    color: #191970;
+    text-align: center;
+}
+
+em strong{
+    color: rgb(255,0,0);
+}

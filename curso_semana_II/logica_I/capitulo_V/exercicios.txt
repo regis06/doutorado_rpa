@@ -1,0 +1,13 @@
+Capitulo V - Parte 1 --> calcula_imc.html
+Capitulo V - Parte 2 --> Alternativa C
+Capitulo V - Parte 3 --> Alternativa A
+Capitulo V - Parte 5 --> funcao_retorna.html
+Capitulo V - Parte 6 --> Alternativa A
+Capitulo V - Parte 7 --> Alternativa C
+Capitulo V - Parte 8 --> Só faltava inserir o return da função calculaImc associado à variável imc
+Capitulo V - Parte 10 --> Inserir a chamada de uma função sem associa-la a uma variável não tem problema desde que você saiba qual será o tipo de dado de retorno dela.
+Capitulo V - Parte 11 --> interagindo_usuario.html
+Capitulo V - Parte 12 --> Alternativa D
+Capitulo V - Parte 13 --> Alternativa A
+Capitulo V - Parte 14 --> Alternativa C
+Capitulo V - Parte 15 --> Alternativa B

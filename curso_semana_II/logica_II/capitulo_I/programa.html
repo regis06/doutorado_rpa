@@ -1,0 +1,102 @@
+<meta charset="UTF-8">
+
+<canvas width="1330" height="600"></canvas>
+
+<script>
+
+    function moveCirculo(x, y, tamanho)
+    {
+        pincel.fillStyle = "brown";
+        pincel.beginPath();
+        pincel.arc(x, y, tamanho, 0,(2 * 3.14));
+        pincel.fill();
+    }
+
+    function redesenha()
+    {
+        pincel.fillStyle = "lightgrey";
+        pincel.fillRect(0, 0, 1330, 600);
+        
+        pincel.fillStyle = "green";
+        pincel.fillRect(0, 0, (1330/4), 600);
+        
+        pincel.fillStyle = "red";
+        pincel.fillRect( ((3/4)*1330), 0, (1330/4), 600);
+
+        pincel.fillStyle = "yellow";
+        pincel.beginPath();
+        pincel.moveTo((1330/2),(600/2));
+        pincel.lineTo((1330/4), 600);
+        pincel.lineTo(((3/4)*1330),600);
+        pincel.fill();
+    }
+
+    function TimeOK(){
+        deuTimeOut = true;
+        redesenha();
+    }
+
+    function chamaMoveCírculo(){
+        redesenha();
+        if (x <= (1330+tamanho))
+        {
+            x++;
+            y= Math.round(x*(600/1330));
+
+            /*
+             y = xa + b
+             PontoA(0,0)
+             PontoB(1330,600)
+             
+             0 = 0a + b logo b = 0
+             600 = 1330a + 0 logo a = 600/1330 = 0,45
+            */
+
+        }else if(y <= (600+tamanho))
+        {
+            
+        }else
+        {
+            x = 1;
+            y = 1;
+        }
+        moveCirculo(x,y,tamanho);
+    }
+    
+    var aguardaTime = false;
+    var deuTimeOut = false;
+    var x = 1, y = 1, tamanho = 50;
+
+    var tela = document.querySelector("canvas");
+    var pincel = tela.getContext('2d');
+    //funciona com aspas duplas e simples estes comandos.
+    redesenha();
+
+    setInterval(chamaMoveCírculo, 20);
+
+    /*
+    while(x != 1330 && y != 600)
+    {
+        console.log("entrou while");   
+        if (deuTimeOut == false && aguardaTime == false)
+        {
+            console.log("entrou primeiro if");
+            setTimeout(TimeOK, 1000);
+            aguardaTime = true;
+        }
+
+        if (deuTimeOut == true)
+        {
+            aguardaTime = false;
+            deuTimeOut = false;
+            if(x < 1330)
+            {
+                x++;
+            }
+            moveCirculo(x,y,tamanho);
+        }
+    }
+    */
+    
+    //variaCirculo(50);
+</script>

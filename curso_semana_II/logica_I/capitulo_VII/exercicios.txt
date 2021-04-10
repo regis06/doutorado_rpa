@@ -1,0 +1,16 @@
+Capitulo VII - Parte 1 --> jogo_copa.html
+Capitulo VII - Parte 2 --> Alternativa B
+Capitulo VII - Parte 3 --> numeros_pares.html
+Capitulo VII - Parte 4 --> de_30_a_40.html
+Capitulo VII - Parte 5 --> de_20_a_0.html
+Capitulo VII - Parte 6 --> nunca_chega.html - o incrementador estava fora do laço while
+Capitulo VII - Parte 7 --> tela_login.html
+Capitulo VII - Parte 8 --> Alternativa B
+Capitulo VII - Parte 9 --> laco_for.html
+Capitulo VII - Parte 10 --> Alternativa A
+Capitulo VII - Parte 11 --> conversao_for_while.html
+Capitulo VII - Parte 12 --> acumula_valores.html
+Capitulo VII - Parte 13 --> media_dos_eventos.html - a inicialização do somatório de gastos era zerada a cada laço do while
+Capitulo VII - Parte 14 --> contador_elegante.html
+Capitulo VII - Parte 16 --> Alternativa C
+Capitulo VII - Parte 17 --> estrelas.html

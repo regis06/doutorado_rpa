@@ -1,0 +1,105 @@
+<meta charset="UTF-8">
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    function desenhaQuadrado(x, y, tamanho, cor) {
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+        
+        pincel.fillStyle = cor;
+        pincel.fillRect(x, y, 1, tamanho);
+        pincel.strokeStyle = cor;
+        pincel.strokeRect(x, y, 1, tamanho);
+    }
+
+    function insereTexto(texto, x, y)
+    {
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.font='15px Georgia';
+        pincel.fillStyle='black';
+        pincel.fillText(texto, x, y+15);
+    }
+
+    function desenhaBarras(x, y, texto, serieAno, cor)
+    {
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        let acumulador = 30;
+        insereTexto(texto,x,y);
+        for(var i = 0; i < serieAno.length; i++)
+        {   
+            desenhaQuadrado(x+5, y+acumulador, serieAno[i], cor[i]);
+            acumulador+= serieAno[i];
+        }
+    }
+
+    function desenhaTriangulo(aX, aY, bX, bY, cor)
+    {
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle= cor;
+        pincel.beginPath();
+        pincel.moveTo(aX, aY);
+        pincel.lineTo(aX, bY);
+        pincel.lineTo(bX, bY);
+        pincel.fill();
+    }
+
+    function desenhaEsquadro(aX, aY, bX, bY, cor)
+    {
+        var tamanhoX = bX-aX, tamanhoY = bY-aY;
+        var centroX = (tamanhoX*(1/3)+aX), centroY = (tamanhoY*(2/3)+aY);
+        var relacaoTamanhosXY = tamanhoX/tamanhoY;
+        var area = ((tamanhoX)*(tamanhoY))/2;
+        var areaTrianguloInterno = area/4;
+
+        var tamanhoYMenor = Math.sqrt((2*areaTrianguloInterno)/relacaoTamanhosXY);
+        var tamanhoXMenor = Math.sqrt(2*areaTrianguloInterno*relacaoTamanhosXY);
+
+        var pontoAYdoMenor = Math.round(centroY-tamanhoYMenor*(2/3)), pontoAXdoMenor = Math.round(centroX-(tamanhoXMenor*(1/3)));
+        var pontoBXdoMenor = Math.round(centroX+tamanhoXMenor*(2/3)), pontoBYdoMenor = Math.round(centroY+tamanhoYMenor*(1/3));
+
+        desenhaTriangulo(aX,aY,bX,bY,cor);
+        console.log(""+pontoAXdoMenor+", "+pontoAYdoMenor+", "+pontoBXdoMenor+", "+pontoBYdoMenor);
+        desenhaTriangulo(pontoAXdoMenor,pontoAYdoMenor, pontoBXdoMenor, pontoBYdoMenor, "white");
+        desenhaQuadrado(centroX, centroY, 1, "black");
+
+    }
+
+    desenhaEsquadro(0,0,400,400,"red");
+
+    desenhaEsquadro(100,200, 200, 300, "yellow")
+
+    /*
+    <!-- esquadro.html -->
+
+<canvas width="600" height="400"></canvas>
+
+
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle="black";
+    pincel.beginPath();
+    pincel.moveTo(50, 50);
+    pincel.lineTo(50, 400);
+    pincel.lineTo(400, 400);
+    pincel.fill();
+
+    pincel.fillStyle="white";
+    pincel.beginPath();
+    pincel.moveTo(100, 175);
+    pincel.lineTo(100, 350);
+    pincel.lineTo(275, 350);
+    pincel.fill();
+    */
+
+    
+</script>

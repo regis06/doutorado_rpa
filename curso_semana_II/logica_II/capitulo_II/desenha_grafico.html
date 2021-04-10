@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    function desenhaQuadrado(x, y, tamanho, cor) {
+        
+        pincel.fillStyle = cor;
+        pincel.fillRect(x, y, 50, tamanho);
+        pincel.strokeStyle = 'black';
+        pincel.strokeRect(x, y, 50, tamanho);
+    }
+
+    function insereTexto(texto, x, y)
+    {
+        pincel.font='15px Georgia';
+        pincel.fillStyle='black';
+        pincel.fillText(texto, x, y+15);
+    }
+
+    function desenhaBarras(x, y, texto, serieAno, cor)
+    {
+        let acumulador = 30;
+        insereTexto(texto,x,y);
+        for(var i = 0; i < serieAno.length; i++)
+        {   
+            desenhaQuadrado(x+5, y+acumulador, serieAno[i], cor[i]);
+            acumulador+= serieAno[i];
+        }
+    }
+
+    var cores = ["blue","green","yellow","red"];
+    var serie2015 = [50, 25, 20, 5];
+    var serie2016 = [65, 20, 13, 2];
+    var x = 0, y = 0;
+
+    desenhaBarras(x, y, "Série 2015", serie2015, cores);
+    desenhaBarras(x+90, y, "Série 2016", serie2016, cores);
+</script>

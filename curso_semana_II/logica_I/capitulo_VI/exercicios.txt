@@ -1,0 +1,13 @@
+Capitulo VI - Parte 1 --> programa.html
+Capitulo VI - Parte 2 --> Alternativa B
+Capitulo VI - Parte 3 --> Alternativa D
+Capitulo VI - Parte 4 --> Alternativa B
+Capitulo VI - Parte 5 --> condicoes.html
+Capitulo VI - Parte 6 --> Alternativa A
+Capitulo VI - Parte 7 --> imc_melhorado.html
+Capitulo VI - Parte 8 --> Alternativa D
+Capitulo VI - Parte 9 --> jogo_advinha.html
+Capitulo VI - Parte 10 --> Alternativa A
+Capitulo VI - Parte 11 --> Erro estava na igualdade onde havia um '=' e deveria haver '=='
+Capitulo VI - Parte 12 --> posso_dirigir.html
+Capitulo VI - Parte 13 --> jogo_funcao_sorteia.html

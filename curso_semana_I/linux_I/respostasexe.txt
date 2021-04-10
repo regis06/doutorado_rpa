@@ -1,0 +1,158 @@
+			Respostas Exercícios
+			
+		Linux I - 01
+	
+4 PWD --> B 
+5 WHOAMI --> c
+6 LISTA DE ARQUIVOS --> B
+7 LS PARAMETRO --> A E C
+9 IMPRIMIR ARQUIVO --> A
+10 LIMPANDO TELA --> D
+11 CAT COM LINHA --> B
+
+		lINUX I - 02
+
+3 ENTRA PASTA --> B
+
+4 
+	~/Desktop $ echo "Faithless" > musicas-favoritas.txt
+	~/Desktop $ echo "REM" >> musicas-favoritas.txt
+	~/Desktop cat musicas-favoritas.txt
+	
+5
+
+	~/Desktop $ mkdir workspace
+	~/Desktop $ cd workspace
+	~/Desktop/workspace $ mkdir projetos-java
+	~/Desktop/workspace $ mkdir projetos-php
+	~/Desktop/workspace $ echo "meu primeiro teste" > arquivo1.txt
+	~/Desktop/workspace $ echo "meu primeiro teste" > arquivo2.txt
+	~/Desktop/workspace $ echo "meu primeiro teste" > arquivo3.txt
+	~/Desktop/workspace $ cd ..
+	
+6 deleta diretório vazio --> A
+
+7
+
+	~/Desktop/workspace $ echo "bem vindo" > arquivo10.txt
+	~/Desktop/workspace $ cat arquivo?.txt
+	meu primeiro teste
+	meu primeiro teste
+	meu primeiro teste
+
+8
+
+	~/Desktop/workspace $ rm arquivo3.txt
+	~/Desktop/workspace $ cd ..
+	~/Desktop $ rm -r workspace/
+	
+		Linux I - 03
+		
+3 Copia --> B
+
+4
+
+	~$ mkdir workspace
+	~$ cd workspace/
+	~/workspace$ echo "bem vindo" > mensagem.txt
+	~/workspace$ ls
+	mensagem.txt
+	~/workspace$ cp mensagem.txt bemvindo.txt
+	~/workspace$ mv mensagem.txt bemvindo2.txt
+	~/workspace$ mkdir projetos-java
+	~/workspace$ mkdir projetos-php
+	~/workspace$ mv bemvindo.txt projetos-java/
+	~/workspace$ ls
+	bemvindo2.txt  projetos-java  projetos-php
+	~/workspace$ ls projetos-java/
+	bemvindo.txt
+	~/workspace$ cp bemvindo2.txt bemvindo.txt
+	~/workspace$ ls
+	bemvindo2.txt  bemvindo.txt  projetos-java  projetos-php
+	~/workspace$ cp -r projetos-java/ projetos-c#/
+	~/workspace$ ls
+	bemvindo2.txt  bemvindo.txt  projetos-c#  projetos-java  projetos-php
+	~/workspace$ ls projetos-c#/
+	bemvindo.txt
+
+
+5 
+
+	~/workspace$ ls bemvindo*
+	bemvindo2.txt  bemvindo.txt
+	~/workspace$ ls
+	bemvindo2.txt  bemvindo.txt  projetos-c#  projetos-java  projetos-php
+	~/workspace$ ls *
+	bemvindo2.txt  bemvindo.txt
+
+	projetos-c#:
+	bemvindo.txt
+
+	projetos-java:
+	bemvindo.txt
+
+	projetos-php:
+	
+6 Arquivando .txt --> B
+
+7 
+
+	~/workspace$ cd ~
+	~/workspace$ pwd
+	/home/regis
+	
+	
+	~/workspace$ cd ~
+	~$ pwd
+	/home/regis
+	~$ zip -rq work.zip workspace/
+	~$ unzip -l work.zip 
+	Archive:  work.zip
+	  Length      Date    Time    Name
+	---------  ---------- -----   ----
+		0  2021-01-17 14:35   workspace/
+	       10  2021-01-17 14:07   workspace/bemvindo2.txt
+	      348  2021-01-17 14:35   workspace/bemvindo.zip
+		0  2021-01-17 14:12   workspace/projetos-java/
+	       10  2021-01-17 14:10   workspace/projetos-java/bemvindo.txt
+		0  2021-01-17 14:11   workspace/projetos-php/
+		0  2021-01-17 14:15   workspace/projetos-c#/
+	       10  2021-01-17 14:15   workspace/projetos-c#/bemvindo.txt
+	       10  2021-01-17 14:14   workspace/bemvindo.txt
+	---------                     -------
+	      388                     9 files
+	~$ rm -r workspace/
+	~$ ls
+	'Área de Trabalho'   Downloads             Hello.js   Modelos   nobot-examples   package-lock.json   snap     work.zip
+	 Documentos          Exercicios_Portugol   Imagens    Música    node_modules     Público             Vídeos
+	~$ unzip -q work.zip 
+	~$ ls
+	'Área de Trabalho'   Downloads             Hello.js   Modelos   nobot-examples   package-lock.json   snap     workspace
+	 Documentos          Exercicios_Portugol   Imagens    Música    node_modules     Público             Vídeos   work.zip
+	 
+8 Mostrando arquivos compactados --> B
+
+		Linux I - 04
+		
+2 Compactar com o TAR --> C
+
+3 Descompactar com o TAR --> B
+
+7 Mais sobre formatação de datas --> C
+
+10 Imprimindo as primeiras linhas --> D
+
+11 Imprimindo as ultimas linhas --> B
+
+			Linux I - 05
+			
+2 Salvando e saindo --> C
+3 Saindo sem salvar --> C
+
+6 Inicio e final do arquivo --> A
+
+10 Copiando --> D
+
+11 Colando --> B
+
+

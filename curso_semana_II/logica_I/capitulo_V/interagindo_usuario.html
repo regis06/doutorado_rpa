@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha(){
+    
+        document.write("<br>");
+    
+    }
+
+    function mostra(texto){
+
+        document.write(texto);
+        pulaLinha();
+    
+    }
+
+    function calculaImc(peso, altura){
+
+        return Math.round( ( peso / (altura * altura ) ) * 100 ) / 100;
+        
+    }
+    
+    var nome = prompt("Digite seu nome: ");
+    
+    alert("Valores antes do regime.");
+
+    var alturaMinha = parseFloat(prompt(nome + ", digite sua altura: "));
+    var pesoMeu = parseFloat(prompt(nome + ", digite seu peso: "));
+
+    var imcAntesRegime = calculaImc(pesoMeu, alturaMinha);
+
+    alert("Valores após o regime.");
+
+    alturaMinha = parseFloat(prompt(nome + ", digite sua altura: "));
+    pesoMeu = parseFloat(prompt(nome + ", digite seu peso: "));
+
+    var imcDepoisRegime = calculaImc(pesoMeu, alturaMinha);
+
+    mostra("Meu IMC antes do regime era " + imcAntesRegime + ", agora está em " + imcDepoisRegime + ".");
+
+</script>

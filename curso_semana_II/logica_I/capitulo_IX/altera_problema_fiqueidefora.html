@@ -1,0 +1,60 @@
+<meta charset="UTF-8">
+
+<script>
+
+    var acumulaLacos = 0
+
+    function numeroAletatorio()
+    {
+        return Math.round((Math.random())*60);
+    }
+
+    function geraArrayAleatorio(tamanho)
+    {
+        var segredos = [];
+        var j = tamanho;
+
+        while(j != 0)
+        {
+            acumulaLacos++;
+            var numRepetido = false;
+            var num = 0;
+
+            do
+            {
+                num = numeroAletatorio();
+            }while(num == 0)
+            
+            for(var i = 0;i < segredos.length; i++)
+            {
+                if (segredos[i] == num)
+                {
+                    console.log("Valor["+(i+1)+"]: "+segredos[i]);
+                    numRepetido = true;
+                    break;
+                }
+            }
+
+            if (numRepetido == false)
+            {
+                j--;
+                segredos.push(num);
+            }
+            
+            
+        }
+    return segredos;      
+    }
+
+    var tamanho = parseInt(prompt("Insira um valor: "))
+    console.log(tamanho);
+    var segredos = geraArrayAleatorio(tamanho);
+
+    console.log(segredos);
+    console.log(acumulaLacos);
+
+
+
+</script>
+
+

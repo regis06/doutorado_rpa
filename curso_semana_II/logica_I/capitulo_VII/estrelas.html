@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function desenhaEstrela(nEstrelas){
+        
+        for(var i = 1; i <= nEstrelas; i++){
+            document.write("*");
+        }
+    }
+
+    function desenhaEspaco(nEstrelas){
+        
+        for(var i = 1; i <= nEstrelas; i++){
+            document.write(" ");
+        }
+
+    }
+
+    for(var l = 1; l <= 3; l++){
+        
+        desenhaEstrela(167);
+        pulaLinha();
+
+    }
+
+</script>

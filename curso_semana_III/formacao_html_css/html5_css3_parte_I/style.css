@@ -1,0 +1,27 @@
+body{
+    text-align: center;
+    background-color: cornsilk;
+}
+
+h1 {
+    text-align: center;
+    color: navy;
+}
+
+#banner{
+    width: 600px; 
+    height: 300px;
+}
+
+p{
+    color: #191970;
+}
+
+#missao{
+    font-size: 20px;
+}
+
+em strong{
+    color: rgb(255,0,0);
+}
+
